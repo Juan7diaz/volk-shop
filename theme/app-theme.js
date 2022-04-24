@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react'
 
-//https://flatuicolors.com/palette/ca
+// https://flatuicolors.com/palette/ca
 
 const primar = '#10ac84'
 const secondary = '#171923'
@@ -21,7 +21,7 @@ const colors = {
   cardBackground: white,
   title: secondary,
   number: secondary,
-  subtitle: subText,
+  subtitle: subText
 }
 
 export const theme = extendTheme({ colors })

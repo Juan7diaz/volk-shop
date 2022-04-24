@@ -9,9 +9,9 @@ import {
   useColorModeValue,
   Icon,
   chakra,
-  Tooltip,
-} from '@chakra-ui/react';
-import { FiShoppingCart } from 'react-icons/fi';
+  Tooltip
+} from '@chakra-ui/react'
+import { FiShoppingCart } from 'react-icons/fi'
 
 const data = {
   imageURL:
@@ -21,58 +21,44 @@ const data = {
   rating: 4.2,
   numReviews: 34,
   tags: ['new', 'shirt']
-};
+}
 
 export default function CardProducts() {
   return (
     <Center p={4}>
-      <Box
-        minW={'320'}
-        maxW="xs"
-        borderWidth="1px"
-        rounded="lg"
-        shadow="lg"
-        >
-        <Image
-          src={data.imageURL}
-          alt={`Picture of ${data.name}`}
-          roundedTop="lg"
-        />
+      <Box minW={'320'} maxW="xs" borderWidth="1px" rounded="lg" shadow="lg">
+        <Image src={data.imageURL} alt={`Picture of ${data.name}`} roundedTop="lg" />
 
-        {/*los nombre de los tags*/}
+        {/* los nombre de los tags */}
         <Box p="6">
-          <Box >
-            {data.tags.map( tag => (
-              <Badge  key={tag}  mx='1'px="2" fontSize="0.8em" colorScheme="blue">
+          <Box>
+            {data.tags.map((tag) => (
+              <Badge key={tag} mx="1" px="2" fontSize="0.8em" colorScheme="blue">
                 {tag}
               </Badge>
-            )
-            )}
+            ))}
           </Box>
 
           {/* nombre del prodcuto y boton de addcarrito */}
           <Flex mt="1" justifyContent="space-between">
-            <Box
-              fontSize="2xl"
-              fontWeight="semibold"
-              as="h4"
-              >
+            <Box fontSize="2xl" fontWeight="semibold" as="h4">
               {data.name}
             </Box>
             <Tooltip
               label="Add to cart"
               bg="white"
-              placement='top'
-              color='gray.800'
-              fontSize='1.2em'>
+              placement="top"
+              color="gray.800"
+              fontSize="1.2em"
+            >
               <chakra.a href={'#'} display={'flex'}>
                 <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
               </chakra.a>
             </Tooltip>
           </Flex>
 
-          {/* raiting y precio*/}
-          <Flex justifyContent="space-between" >
+          {/* raiting y precio */}
+          <Flex justifyContent="space-between">
             <Rating rating={data.rating} numReviews={data.numReviews} />
             <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
               <Box as="span" color={'gray.600'} fontSize="lg">
@@ -84,5 +70,5 @@ export default function CardProducts() {
         </Box>
       </Box>
     </Center>
-  );
+  )
 }

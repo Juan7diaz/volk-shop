@@ -1,14 +1,14 @@
 export const NAV_ITEMS = [
   {
     label: 'Men',
-    href: '/category/men',
+    href: '/category/men'
   },
   {
     label: 'Women',
-    href: '/category/women',
+    href: '/category/women'
   },
   {
     label: 'Children',
-    href: '/category/children',
-  },
-];
+    href: '/category/children'
+  }
+]

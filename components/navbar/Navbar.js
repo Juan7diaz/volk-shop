@@ -9,19 +9,18 @@ import {
   Icon,
   useColorModeValue,
   useBreakpointValue,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { FiMenu, FiX } from 'react-icons/fi';
+  useDisclosure
+} from '@chakra-ui/react'
+import { FiMenu, FiX } from 'react-icons/fi'
 
 import MobileNav from './MobileNav'
-import DesktopNav from './DesktopNav';
+import DesktopNav from './DesktopNav'
 
 export default function Navbar() {
-
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box style={{position: 'fixed', width:'100%'}}>
+    <Box style={{ position: 'fixed', width: '100%' }}>
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -31,18 +30,18 @@ export default function Navbar() {
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        align={'center'}
+      >
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+        >
           <IconButton
             onClick={onToggle}
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
-            icon={
-              isOpen ? <Icon as={FiX} w={5} h={5}/> : <Icon as={FiMenu} w={5} h={5}/>
-            }
+            icon={isOpen ? <Icon as={FiX} w={5} h={5} /> : <Icon as={FiMenu} w={5} h={5} />}
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
@@ -51,7 +50,7 @@ export default function Navbar() {
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
             as={'h1'}
-            >
+          >
             VOLK&apos;S | SHOP
           </Text>
 
@@ -60,17 +59,8 @@ export default function Navbar() {
           </Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
+        <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
+          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
             Sign In
           </Button>
           <Button
@@ -81,8 +71,9 @@ export default function Navbar() {
             bg={'black'}
             href={'#'}
             _hover={{
-              bg: 'gray.700',
-            }}>
+              bg: 'gray.700'
+            }}
+          >
             Sign Up
           </Button>
         </Stack>
@@ -92,5 +83,5 @@ export default function Navbar() {
         <MobileNav />
       </Collapse>
     </Box>
-  );
+  )
 }
