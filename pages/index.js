@@ -2,8 +2,6 @@ import Head from 'next/head'
 import { Navbar, CardProduct } from '../components'
 
 export default function Home({ products }) {
-  console.log(products)
-
   return (
     <>
       <Head>
