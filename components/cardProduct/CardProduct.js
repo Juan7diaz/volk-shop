@@ -6,13 +6,12 @@ import styles from './CardProduct.module.css'
 
 export default function CardProduct({ product }) {
   return (
-    <Box borderWidth="1px" rounded="lg">
+    <Box borderWidth="1px">
       <Box className={styles.container}>
         <Image
           className={styles.img}
           src={product.imageURLPrimary}
           alt={`Picture of ${product.name}`}
-          roundedTop="lg"
         />
       </Box>
 

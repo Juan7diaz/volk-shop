@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Navbar, CardProduct } from '../components'
+import { Navbar, CardProduct, Banner } from '../components'
 
 export default function Home({ products }) {
   return (
@@ -12,6 +12,7 @@ export default function Home({ products }) {
 
       <main>
         <Navbar />
+        <Banner />
         <CardProduct products={products} />
       </main>
     </>

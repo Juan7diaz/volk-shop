@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <Box style={{ position: 'fixed', width: '100%' }}>
+      <Box style={{ position: 'fixed', width: '100%', zIndex: 9 }}>
         <Flex
           bg="white"
           color="gray.600"
