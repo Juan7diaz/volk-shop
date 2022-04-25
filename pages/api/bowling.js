@@ -69,7 +69,7 @@ const shorts = [
     ]
   },
   {
-    id: 30001,
+    id: 30005,
     name: 'Blue bowling shirt',
     desc: 'You are looking at the Bowling Shirt, a retro touch that will make you look cool, how about rolling up the sleeves? try it with some Basic Jeans',
     price: 72000,
@@ -84,7 +84,7 @@ const shorts = [
     ]
   },
   {
-    id: 30001,
+    id: 30006,
     name: 'Red bowling shirt',
     desc: 'You are looking at the Bowling Shirt, a retro touch that will make you look cool, how about rolling up the sleeves? try it with some Basic Jeans',
     price: 72000,
@@ -100,7 +100,7 @@ const shorts = [
     ]
   },
   {
-    id: 30001,
+    id: 30007,
     name: 'Green bowling shirt',
     desc: 'You are looking at the Bowling Shirt, a retro touch that will make you look cool, how about rolling up the sleeves? try it with some Basic Jeans',
     price: 72000,
