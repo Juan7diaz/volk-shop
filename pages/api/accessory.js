@@ -1,9 +1,13 @@
 // code accessory 10001
 
+export default function handler(req, res) {
+  res.status(200).json(accessory)
+}
+
 const accessory = [
   {
     id: 10001,
-    name: 'Beanie Red Wine R35',
+    name: 'Beanie Red Wine',
     desc: 'Beanie 100% knitted in premium acrylic wool.',
     price: 30000,
     rating: 4.2,
@@ -17,7 +21,7 @@ const accessory = [
   },
   {
     id: 10002,
-    name: 'Beanie Palo Rosa R34',
+    name: 'Beanie Palo Rosa',
     desc: 'Beanie 100% knitted in premium acrylic wool.',
     price: 30000,
     rating: 4.2,
@@ -31,7 +35,7 @@ const accessory = [
   },
   {
     id: 10003,
-    name: 'R36 Black Beanie',
+    name: 'Black Beanie',
     desc: 'Beanie 100% knitted in premium acrylic wool.',
     price: 30000,
     rating: 4.2,
@@ -44,7 +48,3 @@ const accessory = [
     ]
   }
 ]
-
-export default function handler(req, res) {
-  res.status(200).json(accessory)
-}

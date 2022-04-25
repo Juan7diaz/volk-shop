@@ -1,2 +1,2 @@
-export { default as CardProducts } from './cardProducts/CardProducts'
+export { default as CardProduct } from './cardProduct/index'
 export { default as Navbar } from './navbar/Navbar'

@@ -19,14 +19,13 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <div style={{ paddingBottom: '88px' }}>
+    <div>
       <Box style={{ position: 'fixed', width: '100%' }}>
         <Flex
           bg="white"
           color="gray.600"
           minH={'60px'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
+          px={'40px'}
           borderBottom={1}
           borderStyle={'solid'}
           borderColor="gray.200"
@@ -51,7 +50,7 @@ export default function Navbar() {
               color="gray.800"
               as={'h1'}
             >
-              VOLK&apos;S | SHOP
+              V O L K &apos; S
             </Text>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
