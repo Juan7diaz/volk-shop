@@ -40,7 +40,14 @@ export default function Navbar() {
               onClick={onToggle}
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
-              icon={isOpen ? <Icon as={FiX} w={5} h={5} /> : <Icon as={FiMenu} w={5} h={5} />}
+              icon={
+                // eslint-disable-next-line multiline-ternary
+                isOpen ? (
+                  <Icon as={FiX} w={5} h={5} />
+                ) : (
+                  <Icon as={FiMenu} w={5} h={5} />
+                )
+              }
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
@@ -58,8 +65,19 @@ export default function Navbar() {
             </Flex>
           </Flex>
 
-          <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
-            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}
+          >
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              fontWeight={400}
+              variant={'link'}
+              href={'#'}
+            >
               Sign In
             </Button>
             <Button

@@ -1,4 +1,10 @@
-import { Flex, Text, Stack, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Stack,
+  useColorModeValue,
+  useDisclosure
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 export default function MobileNavItem({ label, children, href }) {
@@ -14,7 +20,10 @@ export default function MobileNavItem({ label, children, href }) {
           textDecoration: 'none'
         }}
       >
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+        <Text
+          fontWeight={600}
+          color={useColorModeValue('gray.600', 'gray.200')}
+        >
           <Link href={href ?? '#'}>
             <a>{label}</a>
           </Link>

@@ -15,7 +15,7 @@ export default function CardProduct({ product }) {
         />
       </Box>
 
-      {/* cuerpor de la tarjeta */}
+      {/* cuerporde la tarjeta */}
       <CardProductsBody product={product} />
     </Box>
   )

@@ -1,4 +1,12 @@
-import { Box, Flex, Text, Stack, Icon, Link, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Text,
+  Stack,
+  Icon,
+  Link,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { FiChevronDown } from 'react-icons/fi'
 
 export default function DesktopSubNav({ label, href, subLabel }) {
@@ -13,7 +21,11 @@ export default function DesktopSubNav({ label, href, subLabel }) {
     >
       <Stack direction={'row'} align={'center'}>
         <Box>
-          <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+          <Text
+            transition={'all .3s ease'}
+            _groupHover={{ color: 'pink.400' }}
+            fontWeight={500}
+          >
             {label}
           </Text>
           <Text fontSize={'sm'}>{subLabel}</Text>

@@ -3,9 +3,12 @@ import { Navbar, Banner } from '../components'
 import { Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
-const RandomProductsDynamic = dynamic(() => import('../components/randomProducts/RandomProducts'), {
-  ssr: false
-})
+const RandomProductsDynamic = dynamic(
+  () => import('../components/randomProducts/RandomProducts'),
+  {
+    ssr: false
+  }
+)
 
 export default function Home({ products }) {
   return (

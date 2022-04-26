@@ -1,11 +1,29 @@
-import { Box, Flex, Text, HStack, Icon, Image, Link, Skeleton, Stack } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Text,
+  HStack,
+  Icon,
+  Image,
+  Link,
+  Skeleton,
+  Stack
+} from '@chakra-ui/react'
 import * as React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 
 export default function Banner() {
   return (
-    <Box maxW="7xl" mx="auto" px={{ base: '0', lg: '12' }} pt={{ base: '10', lg: '100' }}>
-      <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
+    <Box
+      maxW="7xl"
+      mx="auto"
+      px={{ base: '0', lg: '12' }}
+      pt={{ base: '10', lg: '100' }}
+    >
+      <Stack
+        direction={{ base: 'column-reverse', lg: 'row' }}
+        spacing={{ base: '0', lg: '20' }}
+      >
         <Box
           width={{ lg: 'sm' }}
           transform={{ base: 'translateY(-50%)', lg: 'none' }}
@@ -18,8 +36,9 @@ export default function Banner() {
             <Stack spacing={{ base: '2', lg: '4' }}>
               <Text fontSize="4xl">V O L K &apos; S</Text>
               <Text size="xl" fontWeight="normal">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry &apos; s standard dummy text ever since the 1500s
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry &apos; s standard
+                dummy text ever since the 1500s
               </Text>
             </Stack>
             <HStack spacing="3">
