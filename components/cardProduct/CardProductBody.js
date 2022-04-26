@@ -13,7 +13,7 @@ export default function CardProductsBody({ product }) {
     <Box p="6">
       {/* nombre del prodcuto y boton de addcarrito */}
       <Flex mt="1" justifyContent="space-between">
-        <Box fontSize="2xl" fontWeight="semibold" as="h4">
+        <Box fontSize="lg" fontWeight="semibold" as="h4">
           {product.name}
         </Box>
 
@@ -21,9 +21,9 @@ export default function CardProductsBody({ product }) {
       </Flex>
 
       {/* raiting y precio */}
-      <Box fontSize="2xl" color={'gray.800'}>
+      <Box fontSize="lg" color={'gray.800'}>
         {formatterPeso.format(product.price)}
-        <Box as="span" color={'gray.600'} fontSize="lg">
+        <Box as="span" color={'gray.600'} fontSize="xl">
           {' '}
           Cop
         </Box>
