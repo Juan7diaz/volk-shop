@@ -1,4 +1,4 @@
-export default function getRandomValueArray(array, cant = 4) {
+export default function getRandomProducts(array, cant = 4) {
   const arrayRandom = []
   const arrayIndex = []
 
