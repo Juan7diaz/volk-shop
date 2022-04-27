@@ -12,9 +12,13 @@ import {
   useBreakpointValue,
   useColorModeValue
 } from '@chakra-ui/react'
-import PasswordField from './PasswordField'
 
-export default function Register() {
+import PasswordField from './PasswordField'
+import OAuthButtonGroup from './OAuthButtonGroup'
+
+import Link from 'next/link'
+
+export default function Login() {
   return (
     <Container
       maxW="lg"
@@ -38,7 +42,7 @@ export default function Register() {
             </Text>
             <HStack spacing="1" justify="center">
               <Text color={useColorModeValue('text')}>
-                We are delighted to have you in our family
+                we are delighted to have you back
               </Text>
             </HStack>
           </Stack>
@@ -46,24 +50,6 @@ export default function Register() {
         <Box py={{ base: '0', sm: '8' }} px={{ base: '4', sm: '10' }}>
           <Stack spacing="6">
             <Stack spacing="5">
-              <FormControl>
-                <FormLabel
-                  htmlFor="email"
-                  color={useColorModeValue('nameInput')}
-                >
-                  First name
-                </FormLabel>
-                <Input id="firstName" name="firstName" type="text" />
-              </FormControl>
-              <FormControl>
-                <FormLabel
-                  htmlFor="email"
-                  color={useColorModeValue('nameInput')}
-                >
-                  Last Name
-                </FormLabel>
-                <Input id="lastName" name="lastName" type="text" />
-              </FormControl>
               <FormControl>
                 <FormLabel
                   htmlFor="email"
@@ -79,20 +65,39 @@ export default function Register() {
               <Button
                 color={useColorModeValue('secondary')}
                 bg={useColorModeValue('primary')}
+                _hover={{
+                  bg: 'gray.700'
+                }}
               >
-                Sign Up
+                Sign In
               </Button>
               <HStack>
                 <Divider />
+                <Text
+                  fontSize="sm"
+                  whiteSpace="nowrap"
+                  color={useColorModeValue('text')}
+                >
+                  or continue with
+                </Text>
+                <Divider />
               </HStack>
+              <OAuthButtonGroup />
             </Stack>
             <HStack spacing="1" justify="center">
               <Text color={useColorModeValue('text')}>
-                Do you already have an account?
+                Don&apos;t have an account?
               </Text>
-              <Button variant="link" colorScheme={useColorModeValue('primary')}>
-                Sign In
-              </Button>
+              <Link href={'/access/register'}>
+                <a>
+                  <Button
+                    variant="link"
+                    colorScheme={useColorModeValue('primary')}
+                  >
+                    Sign Up
+                  </Button>
+                </a>
+              </Link>
             </HStack>
           </Stack>
         </Box>

@@ -1,4 +1,5 @@
 export { default as CardProduct } from './cardProduct/Index'
 export { default as Navbar } from './navbar/Navbar'
 export { default as Banner } from './banner/Banner'
-export { default as Register } from './register/Register'
+export { default as Register } from './access/Register'
+export { default as Login } from './access/Login'

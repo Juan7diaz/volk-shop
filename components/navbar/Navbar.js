@@ -27,7 +27,7 @@ export default function Navbar() {
           bg="white"
           color="gray.600"
           minH={'60px'}
-          px={'40px'}
+          px={{ base: '30px', lg: '40px' }}
           borderBottom={1}
           borderStyle={'solid'}
           borderColor="gray.200"
@@ -75,15 +75,21 @@ export default function Navbar() {
             direction={'row'}
             spacing={6}
           >
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}
-            >
-              Sign In
-            </Button>
+            <Box pt={{ base: '0', md: '7px', lg: '7px' }}>
+              <Link href="/access/login">
+                <a>
+                  <Button
+                    as={'p'}
+                    fontSize={'sm'}
+                    fontWeight={400}
+                    variant={'link'}
+                    href={'#'}
+                  >
+                    Sign In
+                  </Button>
+                </a>
+              </Link>
+            </Box>
             <Link href="/access/register">
               <a>
                 <Button
@@ -92,7 +98,6 @@ export default function Navbar() {
                   fontWeight={600}
                   color={'white'}
                   bg={'black'}
-                  href={'#'}
                   _hover={{
                     bg: 'gray.700'
                   }}

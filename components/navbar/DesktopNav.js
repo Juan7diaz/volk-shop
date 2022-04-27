@@ -6,7 +6,7 @@ import { NAV_ITEMS } from '../../data/navItems'
 
 export default function DesktopNav() {
   return (
-    <Stack direction={'row'} spacing={6} color={useColorModeValue('itemNav')}>
+    <Stack direction={'row'} spacing={4} color={useColorModeValue('itemNav')}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Link href={navItem.href ?? '#'}>
