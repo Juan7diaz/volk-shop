@@ -57,7 +57,7 @@ export default function Login() {
                 >
                   Email
                 </FormLabel>
-                <Input id="email" type="email" />
+                <Input id="email" name={'email'} type="email" />
               </FormControl>
               <PasswordField />
             </Stack>

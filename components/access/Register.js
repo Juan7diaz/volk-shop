@@ -49,32 +49,28 @@ export default function Register() {
         <Box py={{ base: '0', sm: '8' }} px={{ base: '4', sm: '10' }}>
           <Stack spacing="6">
             <Stack spacing="5">
-              <FormControl>
-                <FormLabel
-                  htmlFor="email"
-                  color={useColorModeValue('nameInput')}
-                >
-                  First Name
-                </FormLabel>
-                <Input id="firstName" name="firstName" type="text" />
-              </FormControl>
-              <FormControl>
-                <FormLabel
-                  htmlFor="email"
-                  color={useColorModeValue('nameInput')}
-                >
-                  Last Name
-                </FormLabel>
-                <Input id="lastName" name="lastName" type="text" />
-              </FormControl>
-              <FormControl>
+              <HStack align="stretch">
+                <Box>
+                  <FormControl isRequired>
+                    <FormLabel>First Name</FormLabel>
+                    <Input type="text" name={'firtName'} />
+                  </FormControl>
+                </Box>
+                <Box>
+                  <FormControl isRequired>
+                    <FormLabel>Last Name</FormLabel>
+                    <Input type="text" name={'lastName'} />
+                  </FormControl>
+                </Box>
+              </HStack>
+              <FormControl isRequired>
                 <FormLabel
                   htmlFor="email"
                   color={useColorModeValue('nameInput')}
                 >
                   Email
                 </FormLabel>
-                <Input id="email" type="email" />
+                <Input id="email" name={'email'} type="email" />
               </FormControl>
               <PasswordField />
             </Stack>

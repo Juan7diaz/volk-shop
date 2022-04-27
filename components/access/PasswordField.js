@@ -28,7 +28,7 @@ const PasswordField = React.forwardRef((props, ref) => {
   }
 
   return (
-    <FormControl>
+    <FormControl isRequired>
       <FormLabel htmlFor="password" color={useColorModeValue('nameInput')}>
         Password
       </FormLabel>

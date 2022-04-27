@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Navbar, Banner } from '../components'
+import { Navbar, Banner, Footer } from '../components'
 import { Heading, useColorModeValue } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
@@ -35,6 +35,7 @@ export default function Home({ products }) {
         Random products
       </Heading>
       <RandomProductsDynamic products={products} />
+      <Footer />
     </>
   )
 }
