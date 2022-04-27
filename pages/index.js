@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Navbar, Banner } from '../components'
-import { Heading } from '@chakra-ui/react'
+import { Heading, useColorModeValue } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
 const RandomProductsDynamic = dynamic(
@@ -24,7 +24,14 @@ export default function Home({ products }) {
       <main>
         <Banner />
       </main>
-      <Heading as="h1" size="lg" isTruncated pl={'40px'} py={'10'}>
+      <Heading
+        as="h1"
+        size="lg"
+        isTruncated
+        pl={'40px'}
+        py={'10'}
+        color={useColorModeValue('primary')}
+      >
         Random products
       </Heading>
       <RandomProductsDynamic products={products} />

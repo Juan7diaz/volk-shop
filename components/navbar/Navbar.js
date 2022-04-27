@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react'
 import { FiMenu, FiX } from 'react-icons/fi'
 
+import Link from 'next/link'
+
 import MobileNav from './MobileNav'
 import DesktopNav from './DesktopNav'
 
@@ -57,7 +59,9 @@ export default function Navbar() {
               color="gray.800"
               as={'h1'}
             >
-              V O L K &apos; S
+              <Link href="/">
+                <a>▽ V O L K &apos; S</a>
+              </Link>
             </Text>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -80,19 +84,23 @@ export default function Navbar() {
             >
               Sign In
             </Button>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'black'}
-              href={'#'}
-              _hover={{
-                bg: 'gray.700'
-              }}
-            >
-              Sign Up
-            </Button>
+            <Link href="/access/register">
+              <a>
+                <Button
+                  display={{ base: 'none', md: 'inline-flex' }}
+                  fontSize={'sm'}
+                  fontWeight={600}
+                  color={'white'}
+                  bg={'black'}
+                  href={'#'}
+                  _hover={{
+                    bg: 'gray.700'
+                  }}
+                >
+                  Sign Up
+                </Button>
+              </a>
+            </Link>
           </Stack>
         </Flex>
 

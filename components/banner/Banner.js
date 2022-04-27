@@ -7,7 +7,8 @@ import {
   Image,
   Link,
   Skeleton,
-  Stack
+  Stack,
+  useColorModeValue
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
@@ -34,15 +35,25 @@ export default function Banner() {
         >
           <Stack spacing={{ base: '8', lg: '10' }}>
             <Stack spacing={{ base: '2', lg: '4' }}>
-              <Text fontSize="4xl">V O L K &apos; S</Text>
-              <Text size="xl" fontWeight="normal">
+              <Text fontSize="4xl" color={useColorModeValue('primary')}>
+                V O L K &apos; S
+              </Text>
+              <Text
+                size="xl"
+                fontWeight="normal"
+                color={useColorModeValue('text')}
+              >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry &apos; s standard
                 dummy text ever since the 1500s
               </Text>
             </Stack>
             <HStack spacing="3">
-              <Link fontWeight="bold" fontSize="lg">
+              <Link
+                fontWeight="bold"
+                fontSize="lg"
+                color={useColorModeValue('primary')}
+              >
                 Discover our products
               </Link>
               <Icon as={FaArrowRight} />
