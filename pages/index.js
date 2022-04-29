@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Navbar, Banner, Footer } from '../components'
+import { Navbar, Banner, Footer, Benefits } from '../components'
 import { Heading, useColorModeValue } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
@@ -24,6 +24,17 @@ export default function Home({ products }) {
       <main>
         <Banner />
       </main>
+      <Heading
+        as="h1"
+        size="lg"
+        isTruncated
+        pl={'40px'}
+        py={'10'}
+        color={useColorModeValue('primary')}
+      >
+        Our Benefits
+      </Heading>
+      <Benefits />
       <Heading
         as="h1"
         size="lg"

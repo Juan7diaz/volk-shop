@@ -12,7 +12,8 @@ export default function Footer() {
       flexDir={{ base: 'column', sm: 'row' }}
       align="center"
       justify="space-between"
-      p="10"
+      pt="20"
+      pb="5"
       px={'40px'}
       _dark={{
         bg: 'gray.800'
