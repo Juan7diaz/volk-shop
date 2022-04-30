@@ -1,5 +1,12 @@
 import Head from 'next/head'
-import { Navbar, Banner, Footer, Benefits, NameSection } from '../components'
+import {
+  Navbar,
+  Banner,
+  Footer,
+  Benefits,
+  NameSection,
+  FrequentQuestions
+} from '../components'
 import dynamic from 'next/dynamic'
 
 const RandomProductsDynamic = dynamic(
@@ -24,9 +31,14 @@ export default function Home({ products }) {
         <Banner />
       </main>
       <NameSection title={'Our Benefits'} />
+
       <Benefits />
-      <NameSection title={'Random products'} />
+      <NameSection title={'Categorys'} />
+
+      <NameSection title={'Random Products'} />
       <RandomProductsDynamic products={products} />
+      <NameSection title={'Frequent Questions'} />
+      <FrequentQuestions />
       <Footer />
     </>
   )
